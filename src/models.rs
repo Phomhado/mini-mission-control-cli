@@ -1,3 +1,4 @@
+#[derive(Debug, Clone, Copy)]
 pub enum Role {
     Pilot,
     Engineer,
@@ -6,6 +7,7 @@ pub enum Role {
     Commander,
 }
 
+#[derive(Debug, Clone, Copy)]
 pub enum DutyStatus {
     OnDuty,
     OffDuty,
@@ -13,6 +15,7 @@ pub enum DutyStatus {
     Resting,
 }
 
+#[derive(Debug, Clone)]
 pub struct CrewMember {
     pub id: i64,
     pub name: String,
@@ -20,6 +23,7 @@ pub struct CrewMember {
     pub duty_status: DutyStatus,
 }
 
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum SystemName {
     LifeSupport,
     Propulsion,
@@ -28,6 +32,7 @@ pub enum SystemName {
     Navigation
 }
 
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum SystemStatus {
     Nominal,
     Warning,
@@ -35,6 +40,7 @@ pub enum SystemStatus {
     Offline
 }
 
+#[derive(Debug, Clone)]
 pub struct ShipSystem {
     pub id: i64,
     pub name: SystemName,
@@ -43,6 +49,7 @@ pub struct ShipSystem {
     pub last_check: String,
 }
 
+#[derive(Debug, Clone, Copy)]
 pub enum EventTag {
     Burn,
     Checklist,
@@ -52,6 +59,8 @@ pub enum EventTag {
     Routine,
     Improvement
 }
+
+#[derive(Debug, Clone)]
 pub struct MissionEvent {
     pub t_plus_seconds: f64,
     pub title: String,
@@ -59,7 +68,17 @@ pub struct MissionEvent {
     pub tags: Vec<EventTag>,
 }
 
+#[derive(Debug, Clone)]
 pub struct MissionClock {
     pub time_start: String,
     pub time_end: String,
+}
+
+#[derive(Debug, Clone)]
+pub struct  Telemetry {
+    pub fuel_pct: f64,
+    pub o2_pct: f64,
+    pub cabin_temp_c: f64,
+    pub battery_pct: f64,
+    pub generator_kw: f64
 }
