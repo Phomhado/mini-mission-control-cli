@@ -65,14 +65,14 @@ struct MissionClock {
 }
 
 fn main() {
-    let crew_member = CrewMember {
+    let _crew_member = CrewMember {
         id: 1,
         name: "Pedro Oliveira".to_string(),
         role: Role::Engineer,
         duty_status: DutyStatus::OnDuty,
     };
 
-    let ship_system = ShipSystem {
+    let _ship_system = ShipSystem {
         id: 12,
         name: SystemName::LifeSupport,
         status: SystemStatus::Warning,
@@ -80,14 +80,14 @@ fn main() {
         last_check: "10/03/2025".to_string(),
     };
 
-    let mission_event = MissionEvent {
+    let _mission_event = MissionEvent {
         t_plus_seconds: 15.2,
         title: "Fix bug on Life Support systems".to_string(),
         description: "There is a bug that is causing the Life Support systems to turn off for around 2 seconds, we need to fix it".to_string(),
         tags: vec![EventTag::CriticalBug, EventTag::Improvement],
     };
 
-    let mission_clock = MissionClock {
+    let _mission_clock = MissionClock {
         time_start: "10/03/2025".to_string(),
         time_end: "Still Doing".to_string(),
     };
