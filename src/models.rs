@@ -75,7 +75,7 @@ pub struct MissionClock {
 }
 
 #[derive(Debug, Clone)]
-pub struct  Telemetry {
+pub struct Telemetry {
     pub fuel_pct: f64,
     pub o2_pct: f64,
     pub cabin_temp_c: f64,
